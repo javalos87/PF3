@@ -1,0 +1,19 @@
+<div>
+  {{#each docs}}
+    <p>{{this._id}}</p>
+    <p>{{this.title}}</p>
+    <p>{{this.description}}</p>
+    <p>{{this.stock}}</p>
+    <p>{{this.code}}</p>
+  {{/each}}
+</div>
+
+<div>
+  {{#if hasPrevPage}}
+    <a href="/{{prePage}}"><button>Anterior</button></a>
+  {{/if}}
+  <p>{{hasNextPage}}</p>
+  {{#if hasNextPage}}
+    <a href="/{{nextLink}}"><button>Siguiente</button></a>
+  {{/if}}
+</div>
